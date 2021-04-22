@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+/* THE WAY TO SOLVE JAVASCRIPT DARK/LIGHT MODE TOGGLE - then use this variables below */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fefefe; min-height: 100vh; overflow-x: hidden; }
+
+.header { width: 100vw; display: flex; justify-content: center; align-items: center; color: #141414; padding: 1rem; }
+
+.header .main-navigation { width: 90vw; display: flex; justify-content: space-between; align-items: center; }
+
+.header .main-navigation .logo { color: #4d9de0; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.1rem; }
+
+.header .main-navigation .nav-menu { list-style-type: none; display: flex; }
+
+.header .main-navigation .nav-menu .nav-item { margin-left: 1.75rem; font-size: 1.1rem; font-weight: 500; }
+
+.header .main-navigation .nav-menu .nav-item a { text-decoration: none; color: #141414; transition: all 0.3s ease; }
+
+.header .main-navigation .nav-menu .nav-item a:hover { text-decoration: none; color: #4d9de0; }
+
+.header .main-navigation .nav-menu .nav-item .toggle-mode { cursor: pointer; padding: 0.25rem 0.5rem; }
+
+.main { width: 100vw; height: 70vh; background-image: url("/images/main-bg-1.jpg"); background-position: top; background-repeat: no-repeat; background-size: cover; }
+
+.offer-section { width: 100vw; display: flex; align-items: center; justify-content: center; background-color: #fff; }
+
+.offer-section .section-content { width: 80vw; margin: 2rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
+.offer-section .section-content .offer-container { cursor: pointer; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 25px; height: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; transition: all 0.3s ease; }
+
+.offer-section .section-content .offer-container .offer-title { color: #fefefe; background: rgba(0, 0, 0, 0.75); padding: 0.5rem 0.75rem; border-radius: 15px; text-transform: uppercase; font-size: 1.2rem; font-weight: 600; letter-spacing: 1px; }
+
+.offer-section .section-content .offer-container .offer-image { width: 100%; height: auto; border-radius: 25px; }
+
+.offer-section .section-content .offer-container:hover { transform: scale(1.05); }
+
+.offer-section .section-content .vulcanization { background-image: url("../images/offerSection/vulcanization.jpg"); }
+
+.offer-section .section-content .car-rim { background-image: url("../images/offerSection/carRimV4.jpg"); }
+
+.offer-section .section-content .tyre-storage { background-image: url("../images/offerSection/tyresStorage.jpg"); }
+
+.offer-section .section-content .hose-set { background-image: url("../images/offerSection/hoseSet.jpg"); }
+
+.offer-section .section-content .car-mechanic { background-image: url("../images/offerSection/carMechanic.jpg"); }
+
+.offer-section .section-content .upholstery-cleaning { background-image: url("../images/offerSection/upholsteryClening.jpg"); }
+
+.contact-us { width: 100vw; margin: 2rem 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.contact-us .contact-section-title { margin: 1rem 0; padding: 0; width: 100%; font-size: 1.75rem; font-weight: 700; letter-spacing: 0.1rem; text-align: center; }
+
+.contact-us .contact-wrapper { width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+.contact-us .contact-wrapper .contact-info { width: 60%; display: flex; justify-content: space-between; padding: 0.5rem; }
+
+.contact-us .contact-wrapper .contact-info .info { cursor: pointer; margin: 2rem 0; padding: 1rem; border: 2px solid #000; border-radius: 25px; box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 15px 12px; text-align: center; transition: all 0.3s ease; }
+
+.contact-us .contact-wrapper .contact-info .info i { font-size: 2.5rem; margin-bottom: 0.5rem; transition: all 0.3s ease; }
+
+.contact-us .contact-wrapper .contact-info .info:hover i { transform: translateY(-10px); }
+
+.contact-us .contact-wrapper .google-map { width: 80%; height: 50vh; box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 15px 12px; }
+
+.footer { width: 100vw; margin-top: 1rem; background-color: #141414; color: #ddd; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.footer .footer-menu-section { width: 80%; display: flex; padding: 2rem; gap: 1rem; }
+
+.footer .footer-menu-section .footer-menu-column { display: flex; flex-direction: column; justify-content: start; }
+
+.footer .footer-menu-section .footer-menu-column .footer-menu-header { font-size: 1.2rem; font-weight: 500; letter-spacing: 0.1rem; }
+
+.footer .footer-menu-section .footer-menu-column .footer-menu { list-style: none; }
+
+.footer .footer-stipe { width: 100vw; background-color: #000; }
+
+.footer .footer-stipe .footer-stripe-info { width: 80%; display: flex; justify-content: space-between; align-items: center; }
+
+.footer .footer-stipe .footer-stripe-info .footer-logo .logo-text { margin: 0; padding: 0; }
