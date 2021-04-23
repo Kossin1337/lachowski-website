@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
 /* THE WAY TO SOLVE JAVASCRIPT DARK/LIGHT MODE TOGGLE - then use this variables below */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fefefe; min-height: 100vh; overflow-x: hidden; }
 
-.header { width: 100vw; display: flex; justify-content: center; align-items: center; color: #141414; padding: 1rem; }
+.header { z-index: 999; width: 100vw; display: flex; justify-content: center; align-items: center; color: #141414; background-color: #fefefe; padding: 1rem; position: sticky; top: 0; border-bottom: 2px solid #141414; }
 
-.header .main-navigation { width: 90vw; display: flex; justify-content: space-between; align-items: center; }
+.header .main-navigation { width: 90vw; margin: 0.25rem 0; display: flex; justify-content: space-between; align-items: center; }
 
-.header .main-navigation .logo { color: #4d9de0; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.1rem; }
+.header .main-navigation .logo { color: #4d9de0; font-family: "Anonymous Pro", monospace; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.1rem; }
+
+.header .main-navigation .logo .text-content { margin: 0; padding: 0; }
 
 .header .main-navigation .nav-menu { list-style-type: none; display: flex; }
 
@@ -22,9 +25,9 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .main { width: 100vw; height: 70vh; background-image: url("/images/main-bg-1.jpg"); background-position: top; background-repeat: no-repeat; background-size: cover; }
 
-.offer-section { width: 100vw; display: flex; align-items: center; justify-content: center; background-color: #fff; }
+.offer-section { width: 100vw; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #fff; }
 
-.offer-section .section-content { width: 80vw; margin: 2rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.offer-section .section-content { width: 80%; margin: 2rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 
 .offer-section .section-content .offer-container { cursor: pointer; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 25px; height: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; transition: all 0.3s ease; }
 
@@ -34,21 +37,13 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .offer-section .section-content .offer-container:hover { transform: scale(1.05); }
 
-.offer-section .section-content .vulcanization { background-image: url("../images/offerSection/vulcanization.jpg"); }
+.offer-section .services-button { cursor: pointer; font-size: 1.2rem; font-weight: 500; text-transform: uppercase; outline: none; background-color: #4d9de0; color: #fefefe; border: 2px solid #fefefe; border-radius: 10px; padding: 0.5rem 0.75rem; transition: all 0.3s ease; }
 
-.offer-section .section-content .car-rim { background-image: url("../images/offerSection/carRimV4.jpg"); }
+.offer-section .services-button:hover { background-color: #fefefe; color: #4d9de0; border-color: #4d9de0; transform: scale(1.05); }
 
-.offer-section .section-content .tyre-storage { background-image: url("../images/offerSection/tyresStorage.jpg"); }
-
-.offer-section .section-content .hose-set { background-image: url("../images/offerSection/hoseSet.jpg"); }
-
-.offer-section .section-content .car-mechanic { background-image: url("../images/offerSection/carMechanic.jpg"); }
-
-.offer-section .section-content .upholstery-cleaning { background-image: url("../images/offerSection/upholsteryClening.jpg"); }
+.section-title { margin: 2rem 0 1rem 0; padding: 0; width: 100%; font-size: 1.75rem; font-weight: 700; letter-spacing: 0.1rem; text-align: center; text-transform: uppercase; }
 
 .contact-us { width: 100vw; margin: 2rem 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-
-.contact-us .contact-section-title { margin: 1rem 0; padding: 0; width: 100%; font-size: 1.75rem; font-weight: 700; letter-spacing: 0.1rem; text-align: center; }
 
 .contact-us .contact-wrapper { width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
@@ -66,14 +61,89 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .footer .footer-menu-section { width: 80%; display: flex; padding: 2rem; gap: 1rem; }
 
-.footer .footer-menu-section .footer-menu-column { display: flex; flex-direction: column; justify-content: start; }
+.footer .footer-menu-section .footer-menu-column { display: flex; flex-direction: column; justify-content: start; margin-right: 2rem; }
 
-.footer .footer-menu-section .footer-menu-column .footer-menu-header { font-size: 1.2rem; font-weight: 500; letter-spacing: 0.1rem; }
+.footer .footer-menu-section .footer-menu-column .footer-menu-header { margin: 0.25rem 0; font-size: 1.2rem; font-weight: 500; letter-spacing: 0.1rem; }
 
 .footer .footer-menu-section .footer-menu-column .footer-menu { list-style: none; }
 
-.footer .footer-stipe { width: 100vw; background-color: #000; }
+.footer .footer-stipe { width: 100vw; display: flex; justify-content: center; background-color: #030303; }
 
-.footer .footer-stipe .footer-stripe-info { width: 80%; display: flex; justify-content: space-between; align-items: center; }
+.footer .footer-stipe .footer-stripe-info { width: 80%; display: flex; justify-content: center; align-items: center; }
 
-.footer .footer-stipe .footer-stripe-info .footer-logo .logo-text { margin: 0; padding: 0; }
+.footer .footer-stipe .footer-stripe-info .footer-logo .logo-text { margin: 0; padding: 0; font-size: 1.2rem; font-weight: 500; letter-spacing: 0.1rem; }
+
+/* BACKGROUND IMAGES */
+.vulcanization { background-image: url("../images/offerSection/vulcanization.jpg"); }
+
+.car-rim { background-image: url("../images/offerSection/carRimV4.jpg"); }
+
+.tyre-storage { background-image: url("../images/offerSection/tyresStorage.jpg"); }
+
+.hose-set { background-image: url("../images/offerSection/hoseSet.jpg"); }
+
+.car-mechanic { background-image: url("../images/offerSection/carMechanic.jpg"); }
+
+.upholstery-cleaning { background-image: url("../images/offerSection/upholsteryClening.jpg"); }
+
+.petrol-station { background-image: url("../images/offerSection/petrolTanking.jpg"); }
+
+.car-wash { background-image: url("../images/offerSection/carWash.jpg"); }
+
+.car-diagnostics { background-image: url("../images/offerSection/carDiagnostics.jpg"); }
+
+.automative-shop { background-image: url("../images/offerSection/carToolsSmall.jpg"); }
+
+.air-conditioning { background-image: url("../images/offerSection/airConditioning.jpg"); }
+
+.car-dashboard { background-image: url("../images/offerSection/dashboard.jpg"); }
+
+.services-section { width: 100vw; margin-top: 2rem; display: flex; justify-content: center; align-items: center; }
+
+.services-section .services-wrapper { width: 90%; display: grid; grid-template-columns: auto 1fr; }
+
+.services-section .services-wrapper .services-aside { padding: 1rem; }
+
+.services-section .services-wrapper .services-aside .services-aside-title { text-align: center; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.1rem; }
+
+.services-section .services-wrapper .services-aside .services-menu { list-style: none; margin-top: 1rem; }
+
+.services-section .services-wrapper .services-aside .services-menu .serivice-item { padding: 0.25rem 0; margin: 0.25rem 0; }
+
+.services-section .services-wrapper .services-aside .services-menu .serivice-item a { text-decoration: none; color: #141414; font-size: 1.1rem; font-weight: 500; transition: all 0.15s ease; }
+
+.services-section .services-wrapper .services-aside .services-menu .serivice-item:hover a { color: #4d9de0; }
+
+.services-section .services-wrapper .services-content { width: 100%; padding: 1rem 2rem; }
+
+.services-section .services-wrapper .services-content .special-offers { width: 100%; display: flex; flex-direction: column; justify-content: center; }
+
+.services-section .services-wrapper .services-content .special-offers .special-offers-main-title { text-align: center; font-size: 1.75rem; font-weight: 700; letter-spacing: 0.1rem; }
+
+.services-section .services-wrapper .services-content .special-offers .special-offers-title { text-align: center; margin: 0.5rem 0; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.1rem; }
+
+.services-section .services-wrapper .services-content .special-offers .special-offers-container { text-align: center; margin-top: 1rem; display: flex; flex-direction: column; }
+
+.services-section .services-wrapper .services-content .special-offers .special-offers-container .offer-title { font-size: 1.2rem; font-weight: 500; letter-spacing: 0.1rem; line-height: 50px; color: #4d9de0; }
+
+.services-section .services-wrapper .services-content .special-offers .animated-text { position: relative; height: 50px; overflow: hidden; }
+
+.services-section .services-wrapper .services-content .special-offers .animated-text .special-offer h3:nth-child(1) { animation: text-move 5s infinite; }
+
+.services-section .services-wrapper .services-content .services-container { display: flex; flex-wrap: wrap; flex: 1 1 200px; }
+
+.services-section .services-wrapper .services-content .services-container .service-box { display: flex; flex-direction: column; justify-content: flex-start; align-items: start; margin: 1.25rem; flex: 1 1 300px; transition: all 0.3s ease; }
+
+.services-section .services-wrapper .services-content .services-container .service-box .service-image { position: relative; width: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 25px; height: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; text-align: center; transition: all 0.3s ease; }
+
+.services-section .services-wrapper .services-content .services-container .service-box .service-image .service-title { color: #fefefe; background: rgba(0, 0, 0, 0.75); padding: 0.5rem 0.75rem; border-radius: 15px; text-transform: uppercase; font-size: 1.35rem; font-weight: 600; letter-spacing: 1px; }
+
+.services-section .services-wrapper .services-content .services-container .service-box .service-image:hover { transform: scale(1.05); }
+
+.services-section .services-wrapper .services-content .services-container .service-box .service-description { margin: 0.5rem 0; font-size: 1.1rem; }
+
+@keyframes text-move { 0% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+  100% { transform: translateY(0); } }
+
+@media only screen and (max-width: 900px) { .services-aside { display: none; } }
