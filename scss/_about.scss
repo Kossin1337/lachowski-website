@@ -1,0 +1,87 @@
+.about-us {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .about-us-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    .about-us-title {
+      margin: 2rem 0;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .about-us-text {
+      margin: 0.5rem 0;
+    }
+
+    h3 {
+      margin: 1rem 0;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+
+    .certificates {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .certificates-wrapper {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      img {
+        height: 500px;
+      }
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        cursor: pointer;
+        padding: 0.5rem 0.75rem;
+        margin: 0 1.25rem;
+        outline: none;
+        border: none;
+        background-color: $special-text-color;
+        color: $light-text-color;
+        border: 2px solid $light-text-color;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        color: $special-text-color;
+        background-color: $light-text-color;
+        border-color: $special-text-color;
+        transform: scale(1.05);
+      }
+
+      // .see-offer-btn {
+      // }
+
+      // .contact-us-btn {
+      // }
+    }
+  }
+
+  .highlight {
+    color: $special-text-color;
+  }
+}
