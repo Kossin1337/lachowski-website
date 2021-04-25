@@ -5,7 +5,7 @@
 // grid with firm offer
 // footer with current year date
 
-/* change color button */
+/* Light/dark mode change */
 // const rootElement = document.querySelector(":root");
 // const modeButton = document.querySelector(".toggle-mode");
 // modeButton.addEventListener("click", (e) => {
@@ -34,15 +34,15 @@ mapboxgl.accessToken =
   "pk.eyJ1Ijoia29zc2luIiwiYSI6ImNrbnJ1aXVjNjBxZWEycHBmc2p4dDR5MHYifQ.bRuk5Mrn6N9WDUVIHSvbBw";
 const lachowskiLocation = [21.73293, 50.62261];
 
-function setupMap(location) {
-  const map = new mapboxgl.Map({
+async function setupMap(location) {
+  const map = await new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/streets-v11",
     center: location,
     zoom: 12,
   });
 
-  const nav = new mapboxgl.NavigationControl();
+  const nav = await new mapboxgl.NavigationControl();
   map.addControl(nav);
 
   map.on("load", () => {
@@ -57,4 +57,5 @@ function setupMap(location) {
   /* custom point */
   const defaultMarker = new mapboxgl.Marker().setLngLat(location).addTo(map);
 }
+
 setupMap(lachowskiLocation);

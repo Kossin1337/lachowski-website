@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
 /* THE WAY TO SOLVE JAVASCRIPT DARK/LIGHT MODE TOGGLE - then use this variables below */
-* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; scroll-padding-top: 75px; }
 
 body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fefefe; min-height: 100vh; overflow-x: hidden; }
 
@@ -17,7 +17,7 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .header .main-navigation { width: 90vw; margin: 0.25rem 0; display: flex; justify-content: space-between; align-items: center; }
 
-.header .main-navigation .logo { color: #4d9de0; font-family: "Anonymous Pro", monospace; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.1rem; }
+.header .main-navigation .logo { color: #4d9de0; font-family: "Anonymous Pro", monospace; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.1rem; }
 
 .header .main-navigation .logo .text-content { margin: 0; padding: 0; }
 
@@ -35,13 +35,13 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .main .main-content { width: 80%; }
 
-.main .main-content .main-title { background-color: rgba(0, 0, 0, 0.65); padding: 0.5rem 1rem; border-radius: 15px; color: #fefefe; }
+.main .main-content .main-title { width: 75%; background-color: rgba(0, 0, 0, 0.65); padding: 0.5rem 1rem; border-radius: 15px; color: #fefefe; }
 
 .offer-section { width: 100vw; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #fff; }
 
 .offer-section .section-content { width: 80%; margin: 2rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 
-.offer-section .section-content .offer-container { cursor: pointer; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 25px; height: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; transition: all 0.3s ease; }
+.offer-section .section-content .offer-container { cursor: pointer; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 25px; height: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; transition: all 0.3s ease; box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 15px 12px; }
 
 .offer-section .section-content .offer-container .offer-title { color: #fefefe; background: rgba(0, 0, 0, 0.75); padding: 0.5rem 0.75rem; border-radius: 15px; text-transform: uppercase; font-size: 1.2rem; font-weight: 600; letter-spacing: 1px; }
 
@@ -59,9 +59,9 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .contact-us .contact-wrapper { width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
-.contact-us .contact-wrapper .contact-info { width: 60%; display: flex; justify-content: space-between; padding: 0.5rem; }
+.contact-us .contact-wrapper .contact-info { width: 80%; display: flex; flex-wrap: wrap; justify-content: center; align-content: space-between; gap: 1rem; padding: 0.5rem; }
 
-.contact-us .contact-wrapper .contact-info .info { cursor: pointer; margin: 2rem 0; padding: 1rem; border: 2px solid #000; border-radius: 25px; box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 15px 12px; text-align: center; transition: all 0.3s ease; }
+.contact-us .contact-wrapper .contact-info .info { cursor: pointer; padding: 1rem; margin: 0.5rem 0; border: 2px solid #000; border-radius: 25px; box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 15px 12px; text-align: center; transition: all 0.3s ease; white-space: nowrap; }
 
 .contact-us .contact-wrapper .contact-info .info i { font-size: 2.5rem; margin-bottom: 0.5rem; transition: all 0.3s ease; }
 
@@ -69,7 +69,7 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .contact-us .contact-wrapper .google-map { width: 80%; height: 50vh; box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 15px 12px; }
 
-.footer { width: 100vw; margin-top: 1rem; background-color: #141414; color: #ddd; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.footer { width: 100vw; margin-top: 1rem; background-color: #141414; color: #ccc; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 
 .footer .footer-menu-section { width: 80%; display: flex; padding: 2rem; gap: 1rem; }
 
@@ -77,13 +77,13 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .footer .footer-menu-section .footer-menu-column .footer-menu-header { margin: 0.25rem 0; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.1rem; }
 
-.footer .footer-menu-section .footer-menu-column .footer-menu-header a { text-decoration: none; color: #ddd; }
+.footer .footer-menu-section .footer-menu-column .footer-menu-header a { text-decoration: none; color: #ccc; }
 
 .footer .footer-menu-section .footer-menu-column .footer-menu-header:hover a { color: #fefefe; }
 
 .footer .footer-menu-section .footer-menu-column .footer-menu { list-style: none; }
 
-.footer .footer-menu-section .footer-menu-column .footer-menu .footer-menu-item a { text-decoration: none; color: #ddd; }
+.footer .footer-menu-section .footer-menu-column .footer-menu .footer-menu-item a { text-decoration: none; color: #ccc; }
 
 .footer .footer-menu-section .footer-menu-column .footer-menu .footer-menu-item:hover a { color: #fefefe; }
 
@@ -117,6 +117,22 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 .air-conditioning { background-image: url("../images/offerSection/airConditioning.jpg"); }
 
 .car-dashboard { background-image: url("../images/offerSection/dashboard.jpg"); }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1300px) { .header .main-navigation .logo { font-size: 1rem; letter-spacing: 0; }
+  .header .main-navigation .nav-menu .nav-item { font-size: 1rem; }
+  .offer-section .section-content .offer-container .offer-title { font-size: 1rem; } }
+
+@media only screen and (max-width: 1060px) { .header .main-navigation .nav-menu { display: none; }
+  .offer-section .section-content { grid-template-columns: repeat(2, 1fr); }
+  .offer-section .section-content .offer-container .offer-title { font-size: 1.1rem; } }
+
+@media only screen and (max-width: 960px) { .footer .footer-menu-section { flex-wrap: wrap; }
+  .footer .footer-menu-section .footer-menu-column .footer-menu-header { font-size: 1.1rem; }
+  .footer .footer-menu-section .footer-menu-column .footer-menu .footer-menu-item { font-size: 1rem; } }
+
+@media only screen and (max-width: 760px) { .offer-section .section-content { grid-template-columns: repeat(1, 1fr); }
+  .offer-section .section-content .offer-container .offer-title { font-size: 1.25rem; } }
 
 .services-section { width: 100vw; margin-top: 2rem; display: flex; justify-content: center; align-items: center; }
 
@@ -154,7 +170,7 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .services-section .services-wrapper .services-content .services-container .service-box { display: flex; flex-direction: column; justify-content: flex-start; align-items: start; margin: 1.25rem; flex: 1 1 300px; transition: all 0.3s ease; }
 
-.services-section .services-wrapper .services-content .services-container .service-box .service-image { position: relative; width: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 25px; height: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; text-align: center; transition: all 0.3s ease; }
+.services-section .services-wrapper .services-content .services-container .service-box .service-image { position: relative; width: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 25px; height: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; text-align: center; transition: all 0.3s ease; box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 15px 12px; }
 
 .services-section .services-wrapper .services-content .services-container .service-box .service-image .service-title { color: #fefefe; background: rgba(0, 0, 0, 0.75); padding: 0.5rem 0.75rem; border-radius: 15px; text-transform: uppercase; font-size: 1.35rem; font-weight: 600; letter-spacing: 1px; }
 
@@ -166,7 +182,12 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
   50% { transform: translateY(-50px); }
   100% { transform: translateY(0); } }
 
-@media only screen and (max-width: 900px) { .services-aside { display: none; } }
+@media only screen and (max-width: 1600px) { .services-section .services-wrapper .services-content .special-offers .special-offers-container .offer-title { font-size: 1rem; } }
+
+@media only screen and (max-width: 1400px) { .services-section .services-wrapper .services-aside { display: none; } }
+
+@media only screen and (max-width: 1060px) { .services-section .services-wrapper .services-content .special-offers .special-offers-title { display: none; }
+  .services-section .services-wrapper .services-content .special-offers .special-offers-container { display: none; } }
 
 .about-us { width: 100vw; display: flex; align-items: center; justify-content: center; }
 

@@ -31,7 +31,7 @@
 
           a {
             text-decoration: none;
-            color: $default-text-color;
+            color: $dark-text-color;
             font-size: 1.1rem;
             font-weight: 500;
             transition: all 0.15s ease;
@@ -124,6 +124,8 @@
             background-size: cover;
             text-align: center;
             transition: all 0.3s ease;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px,
+              rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
             .service-title {
               color: $light-text-color;
@@ -165,8 +167,45 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .services-aside {
-    display: none;
+@media only screen and (max-width: 1600px) {
+  .services-section {
+    .services-wrapper {
+      .services-content {
+        .special-offers {
+          .special-offers-container {
+            .offer-title {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .services-section {
+    .services-wrapper {
+      .services-aside {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .services-section {
+    .services-wrapper {
+      .services-content {
+        .special-offers {
+          .special-offers-title {
+            display: none;
+          }
+          .special-offers-container {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
