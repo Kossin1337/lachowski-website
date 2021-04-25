@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
 /* THE WAY TO SOLVE JAVASCRIPT DARK/LIGHT MODE TOGGLE - then use this variables below */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
 body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fefefe; min-height: 100vh; overflow-x: hidden; }
+
+.scroll-to-top { position: fixed; cursor: pointer; bottom: 1.25rem; right: 1.25rem; width: 50px; height: 50px; border: 2px solid #4d9de0; background-color: #4d9de0; color: #fefefe; border-radius: 10px; line-height: 50px; display: flex; align-items: center; justify-content: center; text-align: center; visibility: hidden; opacity: 0; transition: all 0.3s ease; }
+
+.scroll-to-top i { font-size: 1.75rem; font-weight: 700; }
+
+.scroll-to-top:hover { background-color: #fefefe; color: #4d9de0; border: 2px solid #4d9de0; }
+
+.active { visibility: visible; opacity: 1; }
 
 .header { z-index: 999; width: 100vw; display: flex; justify-content: center; align-items: center; color: #141414; background-color: #fefefe; padding: 1rem; position: sticky; top: 0; border-bottom: 2px solid #141414; }
 
@@ -27,7 +35,7 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .main .main-content { width: 80%; }
 
-.main .main-content .main-title { color: #fefefe; }
+.main .main-content .main-title { background-color: rgba(0, 0, 0, 0.65); padding: 0.5rem 1rem; border-radius: 15px; color: #fefefe; }
 
 .offer-section { width: 100vw; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #fff; }
 
@@ -67,9 +75,17 @@ body { font-family: "Poppins", sans-serif; color: #141414; background-color: #fe
 
 .footer .footer-menu-section .footer-menu-column { display: flex; flex-direction: column; justify-content: start; margin-right: 2rem; }
 
-.footer .footer-menu-section .footer-menu-column .footer-menu-header { margin: 0.25rem 0; font-size: 1.2rem; font-weight: 500; letter-spacing: 0.1rem; }
+.footer .footer-menu-section .footer-menu-column .footer-menu-header { margin: 0.25rem 0; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.1rem; }
+
+.footer .footer-menu-section .footer-menu-column .footer-menu-header a { text-decoration: none; color: #ddd; }
+
+.footer .footer-menu-section .footer-menu-column .footer-menu-header:hover a { color: #fefefe; }
 
 .footer .footer-menu-section .footer-menu-column .footer-menu { list-style: none; }
+
+.footer .footer-menu-section .footer-menu-column .footer-menu .footer-menu-item a { text-decoration: none; color: #ddd; }
+
+.footer .footer-menu-section .footer-menu-column .footer-menu .footer-menu-item:hover a { color: #fefefe; }
 
 .footer .footer-stipe { width: 100vw; display: flex; justify-content: center; background-color: #030303; }
 

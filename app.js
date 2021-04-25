@@ -17,6 +17,18 @@
 //   console.log(defaultTextColor);
 // });
 
+/* SCROLL TO TOP BUTTON */
+const scrollBtn = document.querySelector(".scroll-to-top");
+
+window.addEventListener("scroll", function () {
+  scrollBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+scrollBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
 /* MAP BOX */
 mapboxgl.accessToken =
   "pk.eyJ1Ijoia29zc2luIiwiYSI6ImNrbnJ1aXVjNjBxZWEycHBmc2p4dDR5MHYifQ.bRuk5Mrn6N9WDUVIHSvbBw";
