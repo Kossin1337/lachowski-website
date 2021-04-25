@@ -17,6 +17,15 @@
 //   console.log(defaultTextColor);
 // });
 
+/* MENU */
+const menuButton = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".main-navigation");
+
+menuButton.addEventListener("click", () => {
+  menuButton.classList.toggle("active");
+  navigation.classList.toggle("active");
+});
+
 /* SCROLL TO TOP BUTTON */
 const scrollBtn = document.querySelector(".scroll-to-top");
 
@@ -51,11 +60,13 @@ async function setupMap(location) {
     });
     map.addControl(directions, "top-left");
 
-    directions.setDestination(lachowskiLocation);
+    directions.setDestination(location);
   });
 
   /* custom point */
-  const defaultMarker = new mapboxgl.Marker().setLngLat(location).addTo(map);
+  const defaultMarker = await new mapboxgl.Marker()
+    .setLngLat(location)
+    .addTo(map);
 }
 
 setupMap(lachowskiLocation);

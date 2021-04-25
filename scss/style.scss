@@ -66,6 +66,23 @@ body {
   top: 0;
   border-bottom: 2px solid $dark-text-color;
 
+  .menu-btn {
+    position: absolute;
+    right: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $main-background-color;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $dark-text-color;
+    border-radius: 5px;
+    display: none;
+  }
+
   .main-navigation {
     width: 90vw;
     margin: 0.25rem 0;
@@ -275,7 +292,7 @@ body {
 
     .google-map {
       width: 80%;
-      height: 50vh;
+      height: 60vh;
       // outline: 2px solid #000;
       box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px,
         rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -420,6 +437,15 @@ body {
     }
   }
 
+  .contact-us {
+    .contact-wrapper {
+      .google-map {
+        margin: 1rem 0;
+        height: 80vh;
+      }
+    }
+  }
+
   .offer-section {
     .section-content {
       .offer-container {
@@ -429,13 +455,43 @@ body {
       }
     }
   }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 1060px) {
   .header {
+    transition: all 0.3s ease;
+    .menu-btn {
+      display: block;
+      margin: 0;
+    }
+    .menu-btn.active {
+      top: 0.6rem;
+      color: $special-text-color;
+    }
     .main-navigation {
+      justify-content: center;
       .nav-menu {
         display: none;
+      }
+    }
+    .main-navigation.active {
+      flex-direction: column;
+      .nav-menu {
+        margin-top: 1.5rem;
+        display: flex;
+      }
+    }
+  }
+
+  .main {
+    height: 60vh;
+    .main-content {
+      .main-title {
+        font-size: 1.5rem;
       }
     }
   }
@@ -480,6 +536,29 @@ body {
         .offer-title {
           font-size: 1.25rem;
         }
+      }
+    }
+  }
+
+  .footer {
+    .footer-stipe {
+      .footer-stripe-info {
+        .footer-logo {
+          .logo-text {
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    .main-navigation {
+      .logo {
+        font-size: 0.8rem;
+        letter-spacing: 0;
       }
     }
   }
