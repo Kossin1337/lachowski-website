@@ -66,7 +66,7 @@ body {
   top: 0;
   border-bottom: 2px solid $dark-text-color;
 
-  .menu-btn {
+  button.menu-btn {
     position: absolute;
     right: 1rem;
     margin: 0 1rem;
@@ -144,13 +144,24 @@ body {
   justify-content: center;
 
   .main-content {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    text-align: left;
 
     .main-title {
-      width: 75%;
-      background-color: rgba(0, 0, 0, 0.65);
+      width: 100%;
+      font-size: 1.9rem;
       padding: 0.5rem 1rem;
-      border-radius: 15px;
+      color: $light-text-color;
+    }
+
+    .sub-title {
+      width: 100%;
+      padding: 0.5rem 1rem;
       color: $light-text-color;
     }
   }
@@ -188,6 +199,7 @@ body {
         rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
       .offer-title {
+        text-align: center;
         color: $light-text-color;
         background: rgba($color: #000000, $alpha: 0.75);
         padding: 0.5rem 0.75rem;
@@ -208,32 +220,33 @@ body {
       transform: scale(1.05);
     }
   }
-  .services-button {
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    outline: none;
-    background-color: $special-text-color;
-    color: $light-text-color;
-    border: 2px solid $light-text-color;
-    border-radius: 10px;
-    padding: 0.5rem 0.75rem;
-    transition: all 0.3s ease;
-  }
-  .services-button:hover {
-    color: $special-text-color;
-    background-color: $light-text-color;
-    border-color: $special-text-color;
-    transform: scale(1.05);
-  }
+}
+
+.section-button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  outline: none;
+  background-color: $special-text-color;
+  color: $light-text-color;
+  border: 2px solid $light-text-color;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.3s ease;
+}
+.section-button:hover {
+  color: $special-text-color;
+  background-color: $light-text-color;
+  border-color: $special-text-color;
+  transform: scale(1.05);
 }
 
 .section-title {
   margin: 2rem 0 1rem 0;
   padding: 0;
   width: 100%;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   text-align: center;
@@ -369,6 +382,7 @@ body {
       align-items: center;
 
       .footer-logo {
+        text-align: center;
         .logo-text {
           margin: 0;
           padding: 0;
@@ -441,7 +455,6 @@ body {
     .contact-wrapper {
       .google-map {
         margin: 1rem 0;
-        height: 80vh;
       }
     }
   }
@@ -464,11 +477,11 @@ body {
 @media only screen and (max-width: 1060px) {
   .header {
     transition: all 0.3s ease;
-    .menu-btn {
+    button.menu-btn {
       display: block;
       margin: 0;
     }
-    .menu-btn.active {
+    button.menu-btn.active {
       top: 0.6rem;
       color: $special-text-color;
     }
@@ -528,6 +541,13 @@ body {
 }
 
 @media only screen and (max-width: 760px) {
+  .main {
+    .main-content {
+      .sub-title {
+        font-size: 1rem;
+      }
+    }
+  }
   .offer-section {
     .section-content {
       grid-template-columns: repeat(1, 1fr);
@@ -559,6 +579,27 @@ body {
       .logo {
         font-size: 0.8rem;
         letter-spacing: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    .main-navigation {
+      .nav-menu {
+        flex-direction: column;
+
+        .nav-item {
+          margin-top: 0.5rem 0;
+        }
+      }
+    }
+  }
+  .main {
+    .main-content {
+      .main-title {
+        font-size: 1.2rem;
       }
     }
   }
